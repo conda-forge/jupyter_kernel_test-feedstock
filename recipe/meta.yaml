@@ -29,7 +29,7 @@ requirements:
     - jsonschema
 
 test:
-  requirements:
+  requires:
     - nose
   imports:
     - jupyter_kernel_test
