@@ -1,7 +1,7 @@
 {% set name = "jupyter_kernel_test" %}
 {% set version = "0.3" %}
 {% set sha256 = "7cd369ad1ce18aa6f12021fd11294f15a7e9aebf198acf4f7cbbed1d9d0cb729" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -23,14 +23,13 @@ requirements:
     - flit
     - pytoml  # flit should depend on pytoml
     - pip  # flit should depend on pip
+    - nose
   run:
     - python
     - jupyter_client
     - jsonschema
 
 test:
-  requires:
-    - nose
   imports:
     - jupyter_kernel_test
 
