@@ -29,6 +29,8 @@ requirements:
     - jsonschema
 
 test:
+  requirements:
+    - nose
   imports:
     - jupyter_kernel_test
 
