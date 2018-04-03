@@ -14,7 +14,7 @@ source:
 
 build:
   number: {{ build }}
-  script: flit install
+  script: flit install --deps=none
   skip: True  # [py2k]
 
 requirements:
