@@ -23,11 +23,11 @@ requirements:
     - flit
     - pytoml  # flit should depend on pytoml
     - pip  # flit should depend on pip
-    - nose
   run:
     - python
     - jupyter_client
     - jsonschema
+    - nose
 
 test:
   imports:
