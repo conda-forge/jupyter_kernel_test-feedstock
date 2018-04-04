@@ -1,7 +1,7 @@
 {% set name = "jupyter_kernel_test" %}
 {% set version = "0.3" %}
 {% set sha256 = "7cd369ad1ce18aa6f12021fd11294f15a7e9aebf198acf4f7cbbed1d9d0cb729" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 build:
   number: {{ build }}
-  script: flit install
+  script: flit install --deps=none
   skip: True  # [py2k]
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
     - python
     - jupyter_client
     - jsonschema
+    - nose
 
 test:
   imports:
