@@ -33,9 +33,9 @@ test:
 
 about:
   home: http://github.com/jupyter/jupyter_kernel_test
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
-  # license_file: LICENSE    The license file is missing from the release tarball
+  license_file: LICENSE
   summary: 'A tool for testing Jupyter kernels'
   description: |
       jupyter_kernel_test is a tool for testing Jupyter kernels. It tests
