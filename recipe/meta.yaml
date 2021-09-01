@@ -1,7 +1,7 @@
 {% set name = "jupyter_kernel_test" %}
 {% set version = "0.3" %}
 {% set sha256 = "7cd369ad1ce18aa6f12021fd11294f15a7e9aebf198acf4f7cbbed1d9d0cb729" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +20,10 @@ build:
 requirements:
   build:
     - python >=3
-    - flit
+    - flit <3
   run:
     - python >=3
-    - jupyter_client
+    - jupyter_client <7.0
     - jsonschema
     - nose
 
@@ -33,9 +33,9 @@ test:
 
 about:
   home: http://github.com/jupyter/jupyter_kernel_test
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
-  # license_file: LICENSE    The license file is missing from the release tarball
+  license_file: LICENSE
   summary: 'A tool for testing Jupyter kernels'
   description: |
       jupyter_kernel_test is a tool for testing Jupyter kernels. It tests
@@ -49,3 +49,4 @@ extra:
     - SylvainCorlay
     - JohanMabille
     - takluyver
+    - martinRenou
