@@ -20,7 +20,7 @@ build:
 requirements:
   build:
     - python >=3
-    - flit
+    - flit <3
   run:
     - python >=3
     - jupyter_client <7.0
