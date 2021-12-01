@@ -15,12 +15,11 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: flit install --deps=none
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3
-    - flit <3
   run:
     - python >=3
     - jupyter_client <7.0
