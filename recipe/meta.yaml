@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - python >=3
+    - pip
   run:
     - python >=3
     - jupyter_client <7.0
