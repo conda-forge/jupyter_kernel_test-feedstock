@@ -21,14 +21,12 @@ requirements:
   host:
     - python >=3
     - pip
-    - jupyter_client <7.0
+    - jupyter_client
     - jsonschema
-    - nose
   run:
     - python >=3
-    - jupyter_client <7.0
+    - jupyter_client
     - jsonschema
-    - nose
 
 test:
   imports:
