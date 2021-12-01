@@ -1,7 +1,7 @@
 {% set name = "jupyter_kernel_test" %}
-{% set version = "0.3" %}
-{% set sha256 = "7cd369ad1ce18aa6f12021fd11294f15a7e9aebf198acf4f7cbbed1d9d0cb729" %}
-{% set build = 3 %}
+{% set version = "0.4.0" %}
+{% set sha256 = "b20e07c4848b9a500c7635d157b1e9409d8c58166e9d38c6501aeb57ea12d47c" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -9,23 +9,24 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/jupyter/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/jupyter/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: {{ build }}
-  script: flit install --deps=none
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python >=3
-    - flit <3
+    - pip
+    - jupyter_client
+    - jsonschema
   run:
     - python >=3
-    - jupyter_client <7.0
+    - jupyter_client
     - jsonschema
-    - nose
 
 test:
   imports:
@@ -36,11 +37,11 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A tool for testing Jupyter kernels'
+  summary: A tool for testing Jupyter kernels
   description: |
-      jupyter_kernel_test is a tool for testing Jupyter kernels. It tests
-      kernels for successful code execution and conformance with the Jupyter
-      Messaging Protocol (currently 5.0).
+    jupyter_kernel_test is a tool for testing Jupyter kernels. It tests
+    kernels for successful code execution and conformance with the Jupyter
+    Messaging Protocol (currently 5.0).
   doc_url: https://github.com/jupyter/jupyter_kernel_test
   dev_url: https://github.com/jupyter/jupyter_kernel_test
 
