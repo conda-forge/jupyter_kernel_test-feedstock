@@ -1,6 +1,6 @@
 {% set name = "jupyter_kernel_test" %}
-{% set version = "0.4.2" %}
-{% set sha256 = "a8acf57a490e05799f70d22171c8fba99fd560c0d6c681a7ff3ae20d33522eba" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "420139a6d2e75ff3a2daf533fd2fe97a5b24d92b802b95ea6bc46078bcb940b2" %}
 {% set build = 0 %}
 
 package:
