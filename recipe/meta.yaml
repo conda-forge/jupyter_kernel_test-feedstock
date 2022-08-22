@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3
     - pip
+    - flit
     - jupyter_client
     - jsonschema
   run:
