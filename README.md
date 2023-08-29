@@ -1,11 +1,11 @@
-About jupyter_kernel_test
-=========================
+About jupyter_kernel_test-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_kernel_test-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/jupyter/jupyter_kernel_test
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_kernel_test-feedstock/blob/main/LICENSE.txt)
 
 Summary: A tool for testing Jupyter kernels
 
