@@ -1,7 +1,7 @@
 {% set name = "jupyter_kernel_test" %}
 {% set version = "0.7.0" %}
 {% set sha256 = "b519bfdc87a28fbc5e1a5284043ff01291e4fba1c6735bad04791ab1de17382f" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -19,17 +19,19 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - hatchling >=1.5
     - jupyter_client
     - jsonschema
   run:
-    - python >=3
+    - python >={{ python_min }}
     - jupyter_client
     - jsonschema
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - jupyter_kernel_test
 
