@@ -1,21 +1,18 @@
 {% set name = "jupyter_kernel_test" %}
 {% set version = "0.7.0" %}
-{% set sha256 = "b519bfdc87a28fbc5e1a5284043ff01291e4fba1c6735bad04791ab1de17382f" %}
-{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: b519bfdc87a28fbc5e1a5284043ff01291e4fba1c6735bad04791ab1de17382f
 
 build:
   noarch: python
-  number: {{ build }}
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
